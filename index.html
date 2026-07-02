@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA IPTV PORTAL - Production Ready</title>
+    
+    <!-- HLS.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SA IPTV PORTAL</h1>
+        <div class="portal-badge">SERVER LIVE</div>
+    </header>
+
+    <div class="main-container">
+        
+        <div class="player-section">
+            <div class="video-wrapper">
+                <video id="iptv-video-engine" controls autoplay playsinline></video>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">
+                <span>চ্যানেল গাইড</span>
+                <span id="channel-counter" style="color: #00ff87;">0 Channels</span>
+            </div>
+            <div class="channel-list" id="playlist-box">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    সার্ভার থেকে প্লেলিস্ট লোড হচ্ছে...
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- External JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
