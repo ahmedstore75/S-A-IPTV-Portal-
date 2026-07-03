@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SA IPTV PORTAL - Production Ready</title>
+    <title>SA IPTV PORTAL - Perfect Fullscreen Edition</title>
     
-    <!-- HLS.js Library -->
+    <!-- Core Ultra-Low Latency HLS Engine -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
-    <!-- External CSS Link -->
+    <!-- External CSS Style -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>SA IPTV PORTAL</h1>
-        <div class="portal-badge">SERVER LIVE</div>
+        
+        <!-- Scrolling Notice Bar -->
+        <div class="notice-container">
+            <span class="notice-label">NOTICE:</span>
+            <marquee class="notice-text" behavior="scroll" direction="left" scrollamount="5">
+                📢 SA IPTV পোর্টালে আপনাকে স্বাগত! স্মুথ এবং বাফারিং মুক্ত লাইভ টিভি দেখতে ন্যূনতম 5 Mbps ইন্টারনেট স্পিড নিশ্চিত করুন। নতুন নতুন চ্যানেল এবং ক্যাটাগরি প্রতিনিয়ত আপডেট করা হচ্ছে। যেকোনো টেকনিক্যাল সমস্যায় দয়া করে আপনার ইন্টারনেট প্রোভাইডার অথবা পোর্টাল অ্যাডমিনের সাথে যোগাযোগ করুন। ধন্যবাদ, আমাদের সাথে থাকার জন্য! 
+            </marquee>
+        </div>
+
+        <!-- Dynamic Channel Counter -->
+        <div class="channel-counter-badge" id="total-channel-counter">Loading...</div>
     </header>
 
     <div class="main-container">
         
+        <!-- Cinematic Video Player Section -->
         <div class="player-section">
             <div class="video-wrapper">
                 <video id="iptv-video-engine" controls autoplay playsinline></video>
@@ -27,21 +38,26 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">
-                <span>চ্যানেল গাইড</span>
-                <span id="channel-counter" style="color: #00ff87;">0 Channels</span>
+            <!-- Filter & Search Controls -->
+            <div class="filter-container">
+                <select id="category-select" class="category-select">
+                    <option value="all">All Categories</option>
+                </select>
+                <input type="text" id="search-input" class="search-box" placeholder="🔍 Search Channels...">
             </div>
+
+            <!-- Dynamic Channel List -->
             <div class="channel-list" id="playlist-box">
                 <div class="loading-state">
                     <div class="spinner"></div>
-                    সার্ভার থেকে প্লেলিস্ট লোড হচ্ছে...
+                    Loading playlist from server...
                 </div>
             </div>
         </div>
 
     </div>
 
-    <!-- External JavaScript Link -->
+    <!-- External JavaScript Logic -->
     <script src="script.js"></script>
 </body>
 </html>
