@@ -1,4 +1,4 @@
-# S-A-IPTV-Portal-" >> README.md
+# S-A-IPTV-Portal >> README.md
 git init
 git add README.md
 git commit -m "first commit"
